@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.o.d"
   "CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o"
   "CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o.d"
+  "CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o"
+  "CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o.d"
   "RADAR-H"
   "RADAR-H.pdb"
 )

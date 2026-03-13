@@ -178,6 +178,30 @@ src/Mainloop/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.s
 .PHONY : src/Mainloop/main.cpp.s
 
+src/Map/Map.o: src/Map/Map.cpp.o
+.PHONY : src/Map/Map.o
+
+# target to build an object file
+src/Map/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o
+.PHONY : src/Map/Map.cpp.o
+
+src/Map/Map.i: src/Map/Map.cpp.i
+.PHONY : src/Map/Map.i
+
+# target to preprocess a source file
+src/Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.i
+.PHONY : src/Map/Map.cpp.i
+
+src/Map/Map.s: src/Map/Map.cpp.s
+.PHONY : src/Map/Map.s
+
+# target to generate assembly for a file
+src/Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.s
+.PHONY : src/Map/Map.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -193,6 +217,9 @@ help:
 	@echo "... src/Mainloop/main.o"
 	@echo "... src/Mainloop/main.i"
 	@echo "... src/Mainloop/main.s"
+	@echo "... src/Map/Map.o"
+	@echo "... src/Map/Map.i"
+	@echo "... src/Map/Map.s"
 .PHONY : help
 
 

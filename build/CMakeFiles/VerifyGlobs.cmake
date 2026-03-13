@@ -16,6 +16,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/root/RADAR-H/src/*.cpp")
 set(OLD_GLOB
   "/root/RADAR-H/src/Camera/Camera.cpp"
   "/root/RADAR-H/src/Mainloop/main.cpp"
+  "/root/RADAR-H/src/Map/Map.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
