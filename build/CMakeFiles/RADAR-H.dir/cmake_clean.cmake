@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RADAR-H.dir/config/config.cpp.o"
+  "CMakeFiles/RADAR-H.dir/config/config.cpp.o.d"
   "CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.o"
   "CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.o.d"
   "CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o"

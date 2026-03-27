@@ -130,6 +130,30 @@ RADAR-H/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/build
 .PHONY : RADAR-H/fast
 
+config/config.o: config/config.cpp.o
+.PHONY : config/config.o
+
+# target to build an object file
+config/config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/config/config.cpp.o
+.PHONY : config/config.cpp.o
+
+config/config.i: config/config.cpp.i
+.PHONY : config/config.i
+
+# target to preprocess a source file
+config/config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/config/config.cpp.i
+.PHONY : config/config.cpp.i
+
+config/config.s: config/config.cpp.s
+.PHONY : config/config.s
+
+# target to generate assembly for a file
+config/config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/config/config.cpp.s
+.PHONY : config/config.cpp.s
+
 src/Camera/Camera.o: src/Camera/Camera.cpp.o
 .PHONY : src/Camera/Camera.o
 
@@ -211,6 +235,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... RADAR-H"
+	@echo "... config/config.o"
+	@echo "... config/config.i"
+	@echo "... config/config.s"
 	@echo "... src/Camera/Camera.o"
 	@echo "... src/Camera/Camera.i"
 	@echo "... src/Camera/Camera.s"

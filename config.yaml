@@ -19,6 +19,7 @@ camera_physical_pose:
     y: 0.0
     z: 0.0
   orientation:
+    offset: 0.0
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
@@ -27,3 +28,9 @@ map_config_parameters:
   map_name: "RMUC_2026_Lite"
   obj_map_file_path: "data/Mapdata/map_obj/RMUC_2026_MAP.obj"
   bin_map_file_path: "data/Mapdata/map_bin/RMUC_2026_MAP.bin"
+
+game_config_parameters:
+  game_state: "preparation"
+  game_side:
+    enemy: "red"
+    ally: "blue"

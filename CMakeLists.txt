@@ -9,6 +9,7 @@ find_package(yaml-cpp REQUIRED)
 # 收集所有 src 下的 cpp 文件作为可执行的源
 file(GLOB_RECURSE SRC_LIST CONFIGURE_DEPENDS
     ${CMAKE_SOURCE_DIR}/src/*.cpp
+    ${CMAKE_SOURCE_DIR}/config/*.cpp
     ${CMAKE_SOURCE_DIR}/src/*.cxx
     ${CMAKE_SOURCE_DIR}/src/*.c
 )
@@ -18,6 +19,7 @@ set(INCLUDE_DIRS
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/data
     ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/config
     /usr/include/eigen3
 )
 set(THIRTY_PARTY_LIBS

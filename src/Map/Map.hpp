@@ -24,7 +24,7 @@ namespace Map
         // 接收只读配置（explicit 防止隐式转换）
         explicit Map(std::shared_ptr<const MapData::MapConfigParameters> cfg);
         ~Map() = default;
-        void Mapload();
+        bool Mapload();
         std::vector<float> Getvector() const;
         std::string GetMapFilePath() const { return Mapconfig_->obj_map_file_path; }
         std::string GetMapName() const { return Mapconfig_->map_name; }

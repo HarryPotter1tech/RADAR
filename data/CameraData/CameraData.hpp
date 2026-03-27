@@ -21,13 +21,18 @@ namespace CameraData
         double sensor_width;  // 传感器宽度
         double sensor_height; // 传感器高度
     };
+    struct VideoDataSet
+    {
+        std::string video_path; // 视频文件路径
+        
+    };
 }
 namespace CameraSpace
 {
     struct CameraPhysicalPose // 摄像头物理位姿
     {
         Eigen::Vector3d position;       // 摄像头位置
-        Eigen::Quaterniond orientation; // 摄像头朝向
+        Eigen::Matrix3d orientation; // 摄像头朝向
     };
     struct ArmorPose
     {

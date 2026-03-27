@@ -1,13 +1,18 @@
 #pragma once
 #include <iostream>
+#include <optional>
 #include "CameraData/CameraData.hpp"
 namespace Game
 {
-    enum GameTime
+    struct  GameState
     {
-        preparation,
-        play,
-        end        
+        std::string state; // "preparation", "in_progress", "ended"
+    };
+    
+    struct GameSide
+    {
+        std::string enemy;
+        std::string ally;
     };
 }
 namespace RobotParameters

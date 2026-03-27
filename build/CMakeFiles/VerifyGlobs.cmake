@@ -3,6 +3,16 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SRC_LIST at CMakeLists.txt:10 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/harryh/RADAR-2026/RADAR/config/*.cpp")
+set(OLD_GLOB
+  "/home/harryh/RADAR-2026/RADAR/config/config.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/harryh/RADAR-2026/RADAR/build/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SRC_LIST at CMakeLists.txt:10 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/harryh/RADAR-2026/RADAR/src/*.c")
 set(OLD_GLOB
   )
