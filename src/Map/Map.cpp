@@ -7,7 +7,7 @@ namespace Map
     {
     }
 
-     bool Map::Mapload()
+    bool Map::Mapload()
     {
         if (!Mapconfig_)
         {
@@ -43,15 +43,18 @@ namespace Map
         return true;
     }
 
-    std::vector<float> Map::Getvector() const
+    std::vector<Eigen::Vector3d> Map::Getvector() const
     {
-        std::vector<float> vertices;
-        vertices.reserve(attrib_.vertices.size());
-        for (float value : attrib_.vertices)
+        std::vector<Eigen::Vector3d> Vertices;
+        Vertices.reserve(attrib_.vertices.size() / 3);
+        for (size_t i = 0; i < attrib_.vertices.size(); i += 3)
         {
-            vertices.push_back(value);
-            std::cout << value << " "<< std::endl; 
+            double x = attrib_.vertices[i];
+            double y = attrib_.vertices[i + 1];
+            double z = attrib_.vertices[i + 2];
+            Vertices.emplace_back(x, y, z);
+            std::cout << std::fixed << std::setprecision(3) << "Vertex " << i / 3 << ": (" << x << ", " << y << ", " << z << ")" << std::endl;
         }
-        return vertices;
+        return Vertices;
     }
 }
