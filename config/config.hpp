@@ -14,5 +14,6 @@ namespace YamlConfigs
                    std::shared_ptr<CameraData::CameraInsideParameters> camera_inside_parameters,
                    std::shared_ptr<CameraSpace::CameraPhysicalPose> camera_physical_pose,
                    std::shared_ptr<Game::GameSide> game_side,
-                   std::shared_ptr<Game::GameState> game_state);
+                   std::shared_ptr<Game::GameState> game_state
+                   ,std::shared_ptr<Game::version> game_version);
 }

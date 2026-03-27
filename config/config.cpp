@@ -9,7 +9,7 @@ namespace YamlConfigs
                    std::shared_ptr<Game::GameState> game_state,
                    std::shared_ptr<Game::version> game_version)
      {
-          YAML::Node global_config = YAML::LoadFile("config.yaml");
+          YAML::Node global_config = YAML::LoadFile("../config.yaml");
           std::cout << "loadding config.yaml..." << std::endl;
           if (global_config["camera_config_parameters"])
           {
