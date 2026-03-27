@@ -50,6 +50,7 @@ namespace Map
         for (float value : attrib_.vertices)
         {
             vertices.push_back(value);
+            std::cout << value << " "<< std::endl; 
         }
         return vertices;
     }

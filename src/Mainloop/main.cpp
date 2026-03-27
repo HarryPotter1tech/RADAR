@@ -49,5 +49,6 @@ int main()
         std::cerr << "Failed to load map." << std::endl;
         return -1;
     }
+    std::vector<float> vertices = map->Getvector();
     return 0;
 }
