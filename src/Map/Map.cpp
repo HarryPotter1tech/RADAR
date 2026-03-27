@@ -1,25 +1,55 @@
+#define TINYOBJLOADER_IMPLEMENTATION
 #include "Map.hpp"
 namespace Map
 {
-    std::vector<objl::Mesh> Map::LoadMap()
+    Map::Map(std::shared_ptr<const MapData::MapConfigParameters> cfg)
+        : Mapconfig_(std::move(cfg))
     {
-        bool isMapLoaded = loader_.LoadFile(Mapconfig_->mapFilePath);
-        if (isMapLoaded)
+    }
+
+    void Map::Mapload()
+    {
+        if (!Mapconfig_)
         {
-            auto meshes = std::move(loader_.LoadedMeshes);
-            std::cout << "地图加载成功！" << std::endl;
-            std::cout << "加载的网格数量: " << meshes.size() << std::endl;
-            for (size_t i = 0; i < meshes.size(); ++i)
-            {
-                std::cout << "网格 " << i + 1 << ": " << meshes[i].Vertices.size() << " 顶点, "
-                          << meshes[i].Indices.size() / 3 << " 三角形" << std::endl;
-            }
-            return meshes;
+            std::cerr << "Map configuration is not available." << std::endl;
+            return;
         }
-        else
+
+        warn_.clear();
+        err_.clear();
+        const bool loaded = tinyobj::LoadObj(
+            &attrib_,
+            &shapes_,
+            &materials_,
+            &warn_,
+            &err_,
+            Mapconfig_->obj_map_file_path.c_str(),
+            nullptr,
+            true,
+            false);
+
+        if (!warn_.empty())
         {
-            std::cerr << "地图加载失败！请检查路径和文件格式。" << std::endl;
-            return std::vector<objl::Mesh>();
+            std::cerr << "OBJ load warning: " << warn_ << std::endl;
         }
+
+        if (!loaded)
+        {
+            std::cerr << "Failed to load OBJ file: " << err_ << std::endl;
+            return;
+        }
+
+        std::cout << "Successfully loaded OBJ file: " << Mapconfig_->obj_map_file_path << std::endl;
+    }
+
+    std::vector<float> Map::Getvector() const
+    {
+        std::vector<float> vertices;
+        vertices.reserve(attrib_.vertices.size());
+        for (float value : attrib_.vertices)
+        {
+            vertices.push_back(value);
+        }
+        return vertices;
     }
 }

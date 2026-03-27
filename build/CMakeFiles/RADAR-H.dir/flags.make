@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/RADAR-H/include -I/root/RADAR-H/data -I/root/RADAR-H/src -I/usr/include/eigen3 -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/home/harryh/RADAR-2026/RADAR/include -I/home/harryh/RADAR-2026/RADAR/data -I/home/harryh/RADAR-2026/RADAR/src -I/usr/include/eigen3 -isystem /usr/include/opencv4
 
 CXX_FLAGS = 
 

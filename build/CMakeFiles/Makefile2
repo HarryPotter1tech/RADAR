@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/RADAR-H
+CMAKE_SOURCE_DIR = /home/harryh/RADAR-2026/RADAR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/RADAR-H/build
+CMAKE_BINARY_DIR = /home/harryh/RADAR-2026/RADAR/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/RADAR-H.dir/clean
 CMakeFiles/RADAR-H.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/RADAR-H/build/CMakeFiles --progress-num=1,2,3,4 "Built target RADAR-H"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/harryh/RADAR-2026/RADAR/build/CMakeFiles --progress-num=1,2,3,4 "Built target RADAR-H"
 .PHONY : CMakeFiles/RADAR-H.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RADAR-H.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/RADAR-H/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/harryh/RADAR-2026/RADAR/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RADAR-H.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/RADAR-H/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/harryh/RADAR-2026/RADAR/build/CMakeFiles 0
 .PHONY : CMakeFiles/RADAR-H.dir/rule
 
 # Convenience name for target.
@@ -107,7 +107,7 @@ CMakeFiles/RADAR-H.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /root/RADAR-H/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/harryh/RADAR-2026/RADAR/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

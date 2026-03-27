@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
 #include <Eigen/Dense>
+
 namespace CameraData
 {
     struct CameraConfigParameters
     {
         int deviceID;   // 摄像头设备ID
-        int apiID;      // API后端ID
         int width;      // 图像宽度
         int height;     // 图像高度
         int brightness; // 亮度
@@ -17,9 +17,9 @@ namespace CameraData
     };
     struct CameraInsideParameters // 摄像头内部参数
     {
-        double focalLength;  // 焦距
-        double sensorWidth;  // 传感器宽度
-        double sensorHeight; // 传感器高度
+        double focal_length;  // 焦距
+        double sensor_width;  // 传感器宽度
+        double sensor_height; // 传感器高度
     };
 }
 namespace CameraSpace
@@ -29,8 +29,8 @@ namespace CameraSpace
         Eigen::Vector3d position;       // 摄像头位置
         Eigen::Quaterniond orientation; // 摄像头朝向
     };
-    struct CameraTargetPose // 识别目标位姿
+    struct ArmorPose
     {
-        Eigen::Vector3d targetPosition; // 目标位置
+      Eigen::Vector3d position; // 装甲板位置(x,y,0)  
     };
 }

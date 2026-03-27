@@ -1,10 +1,11 @@
 #pragma once
-#include <memory>
 #include <vector>
 #include <string>
+#include <memory>
+#include <utility>
 #include <iostream>
 #include "../../data/Mapdata/Mapdata.hpp"
-#include "../../include/OBJ_Loader.h"
+#include "../../include/tiny_obj_loader.h"
 
 namespace Map
 {
@@ -13,12 +14,19 @@ namespace Map
     {
     private:
         std::shared_ptr<const MapData::MapConfigParameters> Mapconfig_; // 只读配置
-        objl::Loader loader_;                                           // 私有 loader 实例
+        tinyobj::attrib_t attrib_;
+        std::vector<tinyobj::shape_t> shapes_;
+        std::vector<tinyobj::material_t> materials_;
+        std::string warn_;
+        std::string err_;
 
     public:
         // 接收只读配置（explicit 防止隐式转换）
-        explicit Map(std::shared_ptr<const MapData::MapConfigParameters> cfg) {}
+        explicit Map(std::shared_ptr<const MapData::MapConfigParameters> cfg);
         ~Map() = default;
-        std::vector<objl::Mesh> LoadMap();
+        void Mapload();
+        std::vector<float> Getvector() const;
+        std::string GetMapFilePath() const { return Mapconfig_->obj_map_file_path; }
+        std::string GetMapName() const { return Mapconfig_->map_name; }
     };
 }
