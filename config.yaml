@@ -26,8 +26,8 @@ camera_physical_pose:
 
 map_config_parameters:
   map_name: "RMUC_2026_Lite"
-  obj_map_file_path: "/home/harryh/RADAR-2026/RADAR/data/Mapdata/map_obj/2026RMUC_MAP.obj"
-  bin_map_file_path: "/home/harryh/RADAR-2026/RADAR/data/Mapdata/map_bin/RMUC_2026_MAP.bin"
+  obj_map_file_path: "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/data/Mapdata/map_obj/2026RMUC_MAP.obj"
+  bin_map_file_path: "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/data/Mapdata/map_bin/RMUC_2026_MAP.bin"
 #..because this is a relative path that relative to the Map.cpp 
 game_config_parameters:
   game_state: "preparation"

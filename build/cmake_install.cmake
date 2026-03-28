@@ -1,4 +1,4 @@
-# Install script for directory: /home/harryh/RADAR-2026/RADAR
+# Install script for directory: /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/harryh/RADAR-2026/RADAR/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

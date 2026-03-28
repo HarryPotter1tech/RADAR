@@ -50,5 +50,6 @@ int main()
         return -1;
     }
     std::vector<Eigen::Vector3d> vertices = map->Getvector();
+    std::vector<Eigen::Matrix3d> triangles = map->GetTriangle();
     return 0;
 }
