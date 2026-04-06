@@ -18,8 +18,9 @@ public:
         std::shared_ptr<Data::CameraData::CameraDriver> camera,
         std::shared_ptr<Data::MapData::MapDriver> map)
         : camera(camera)
-        , map(map) {}
-    { std::cout << "LocationDriver initialized with Camera and Map." << std::endl; };
+        , map(map) {
+        std::cout << "LocationDriver initialized with Camera and Map." << std::endl;
+    }
     ~LocationDriver();
     void locate();
 };
