@@ -45,4 +45,3 @@ IncludeBlocks: Preserve
 IndentWrappedFunctionNames: true
 
 AlwaysBreakTemplateDeclarations: true
-IndentRequiresClause: false
