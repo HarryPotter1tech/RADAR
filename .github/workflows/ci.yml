@@ -17,16 +17,12 @@ jobs:
       - name: Install linters
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends clang-format clang-format-14 cppcheck
+          sudo apt-get install -y --no-install-recommends clang-format-22 cppcheck
 
       - name: Check formatting with clang-format
         run: |
-          if command -v clang-format-14 >/dev/null 2>&1; then
-            FORMATTER=clang-format-14
-          elif command -v clang-format >/dev/null 2>&1; then
-            FORMATTER=clang-format
-          else
-            echo "clang-format is not installed on runner"
+          if ! command -v clang-format-22 >/dev/null 2>&1; then
+            echo "clang-format-22 is not installed on runner"
             exit 1
           fi
 
@@ -39,7 +35,7 @@ jobs:
           if [ -n "$FILES" ]; then
             set -o pipefail
             for f in $FILES; do
-              "$FORMATTER" -style=file "$f" | diff -u "$f" - || {
+              clang-format-22 -style=file "$f" | diff -u "$f" - || {
                 echo "Formatting issues detected in $f"; exit 1; }
             done
           else
