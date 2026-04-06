@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install linters
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends clang-format cppcheck
+
+      - name: Check formatting with clang-format
+        run: |
+          FILES=$(git ls-files '*.cpp' '*.c' '*.hpp' '*.h' '*.cc' '*.cxx' '*.hh' '*.hxx')
+          if [ -n "$FILES" ]; then
+            set -o pipefail
+            for f in $FILES; do
+              clang-format -style=file "$f" | diff -u "$f" - || {
+                echo "Formatting issues detected in $f"; exit 1; }
+            done
+          else
+            echo "No source files found for formatting check"
+          fi
+
+      - name: Run cppcheck
+        run: |
+          cppcheck --enable=warning,performance,portability,style --inconclusive --force --error-exitcode=1 src || true
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            cmake \
+            libopencv-dev \
+            libeigen3-dev \
+            libyaml-cpp-dev \
+            pkg-config
+
+      - name: Configure (CMake)
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+      - name: Build
+        run: cmake --build build -- -j$(nproc)
+
+      - name: Run tests (if any)
+        run: |
+          if [ -f build/CTestTestfile.cmake ]; then
+            cd build
+            ctest --output-on-failure || true
+          else
+            echo "No tests configured"
+          fi

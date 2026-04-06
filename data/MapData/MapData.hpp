@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-namespace MapData
+namespace Data::MapData
 {
     struct MapConfigParameters
     {

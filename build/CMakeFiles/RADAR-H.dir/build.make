@@ -97,10 +97,24 @@ CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Camera/Camera.cpp -o CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.s
 
+CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
+CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o: ../src/Location/Location.cpp
+CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o -c /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Location/Location.cpp
+
+CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Location/Location.cpp > CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.i
+
+CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Location/Location.cpp -o CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.s
+
 CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
 CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o: ../src/Mainloop/main.cpp
 CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o -c /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Mainloop/main.cpp
 
 CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.s: cmake_force
 CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
 CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o: ../src/Map/Map.cpp
 CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o -c /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Map/Map.cpp
 
 CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.i: cmake_force
@@ -125,20 +139,70 @@ CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Map/Map.cpp -o CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.s
 
+CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
+CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o: ../src/Utility/BVH\ tree/BVH\ tree.cpp
+CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o -c "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/BVH tree/BVH tree.cpp"
+
+CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/BVH tree/BVH tree.cpp" > CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.i
+
+CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/BVH tree/BVH tree.cpp" -o CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.s
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o: ../src/Utility/Ray/AABB.cpp
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o -c /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/AABB.cpp
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/AABB.cpp > CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.i
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/AABB.cpp -o CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.s
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o: CMakeFiles/RADAR-H.dir/flags.make
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o: ../src/Utility/Ray/Ray.cpp
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o: CMakeFiles/RADAR-H.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o -MF CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o.d -o CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o -c /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/Ray.cpp
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/Ray.cpp > CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.i
+
+CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/Ray.cpp -o CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.s
+
 # Object files for target RADAR-H
 RADAR__H_OBJECTS = \
 "CMakeFiles/RADAR-H.dir/config/config.cpp.o" \
 "CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.o" \
+"CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o" \
 "CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o" \
-"CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o"
+"CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o" \
+"CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o" \
+"CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o" \
+"CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o"
 
 # External object files for target RADAR-H
 RADAR__H_EXTERNAL_OBJECTS =
 
 RADAR-H: CMakeFiles/RADAR-H.dir/config/config.cpp.o
 RADAR-H: CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.o
+RADAR-H: CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o
 RADAR-H: CMakeFiles/RADAR-H.dir/src/Mainloop/main.cpp.o
 RADAR-H: CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.o
+RADAR-H: CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o
+RADAR-H: CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o
+RADAR-H: CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o
 RADAR-H: CMakeFiles/RADAR-H.dir/build.make
 RADAR-H: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0
 RADAR-H: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
@@ -196,7 +260,7 @@ RADAR-H: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 RADAR-H: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 RADAR-H: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
 RADAR-H: CMakeFiles/RADAR-H.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable RADAR-H"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable RADAR-H"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RADAR-H.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

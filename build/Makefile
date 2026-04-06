@@ -178,6 +178,30 @@ src/Camera/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Camera/Camera.cpp.s
 .PHONY : src/Camera/Camera.cpp.s
 
+src/Location/Location.o: src/Location/Location.cpp.o
+.PHONY : src/Location/Location.o
+
+# target to build an object file
+src/Location/Location.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.o
+.PHONY : src/Location/Location.cpp.o
+
+src/Location/Location.i: src/Location/Location.cpp.i
+.PHONY : src/Location/Location.i
+
+# target to preprocess a source file
+src/Location/Location.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.i
+.PHONY : src/Location/Location.cpp.i
+
+src/Location/Location.s: src/Location/Location.cpp.s
+.PHONY : src/Location/Location.s
+
+# target to generate assembly for a file
+src/Location/Location.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Location/Location.cpp.s
+.PHONY : src/Location/Location.cpp.s
+
 src/Mainloop/main.o: src/Mainloop/main.cpp.o
 .PHONY : src/Mainloop/main.o
 
@@ -226,6 +250,78 @@ src/Map/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Map/Map.cpp.s
 .PHONY : src/Map/Map.cpp.s
 
+src/Utility/BVH_tree/BVH_tree.o: src/Utility/BVH_tree/BVH_tree.cpp.o
+.PHONY : src/Utility/BVH_tree/BVH_tree.o
+
+# target to build an object file
+src/Utility/BVH_tree/BVH_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.o
+.PHONY : src/Utility/BVH_tree/BVH_tree.cpp.o
+
+src/Utility/BVH_tree/BVH_tree.i: src/Utility/BVH_tree/BVH_tree.cpp.i
+.PHONY : src/Utility/BVH_tree/BVH_tree.i
+
+# target to preprocess a source file
+src/Utility/BVH_tree/BVH_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.i
+.PHONY : src/Utility/BVH_tree/BVH_tree.cpp.i
+
+src/Utility/BVH_tree/BVH_tree.s: src/Utility/BVH_tree/BVH_tree.cpp.s
+.PHONY : src/Utility/BVH_tree/BVH_tree.s
+
+# target to generate assembly for a file
+src/Utility/BVH_tree/BVH_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/BVH_tree/BVH_tree.cpp.s
+.PHONY : src/Utility/BVH_tree/BVH_tree.cpp.s
+
+src/Utility/Ray/AABB.o: src/Utility/Ray/AABB.cpp.o
+.PHONY : src/Utility/Ray/AABB.o
+
+# target to build an object file
+src/Utility/Ray/AABB.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.o
+.PHONY : src/Utility/Ray/AABB.cpp.o
+
+src/Utility/Ray/AABB.i: src/Utility/Ray/AABB.cpp.i
+.PHONY : src/Utility/Ray/AABB.i
+
+# target to preprocess a source file
+src/Utility/Ray/AABB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.i
+.PHONY : src/Utility/Ray/AABB.cpp.i
+
+src/Utility/Ray/AABB.s: src/Utility/Ray/AABB.cpp.s
+.PHONY : src/Utility/Ray/AABB.s
+
+# target to generate assembly for a file
+src/Utility/Ray/AABB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/AABB.cpp.s
+.PHONY : src/Utility/Ray/AABB.cpp.s
+
+src/Utility/Ray/Ray.o: src/Utility/Ray/Ray.cpp.o
+.PHONY : src/Utility/Ray/Ray.o
+
+# target to build an object file
+src/Utility/Ray/Ray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.o
+.PHONY : src/Utility/Ray/Ray.cpp.o
+
+src/Utility/Ray/Ray.i: src/Utility/Ray/Ray.cpp.i
+.PHONY : src/Utility/Ray/Ray.i
+
+# target to preprocess a source file
+src/Utility/Ray/Ray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.i
+.PHONY : src/Utility/Ray/Ray.cpp.i
+
+src/Utility/Ray/Ray.s: src/Utility/Ray/Ray.cpp.s
+.PHONY : src/Utility/Ray/Ray.s
+
+# target to generate assembly for a file
+src/Utility/Ray/Ray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RADAR-H.dir/build.make CMakeFiles/RADAR-H.dir/src/Utility/Ray/Ray.cpp.s
+.PHONY : src/Utility/Ray/Ray.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,12 +337,24 @@ help:
 	@echo "... src/Camera/Camera.o"
 	@echo "... src/Camera/Camera.i"
 	@echo "... src/Camera/Camera.s"
+	@echo "... src/Location/Location.o"
+	@echo "... src/Location/Location.i"
+	@echo "... src/Location/Location.s"
 	@echo "... src/Mainloop/main.o"
 	@echo "... src/Mainloop/main.i"
 	@echo "... src/Mainloop/main.s"
 	@echo "... src/Map/Map.o"
 	@echo "... src/Map/Map.i"
 	@echo "... src/Map/Map.s"
+	@echo "... src/Utility/BVH_tree/BVH_tree.o"
+	@echo "... src/Utility/BVH_tree/BVH_tree.i"
+	@echo "... src/Utility/BVH_tree/BVH_tree.s"
+	@echo "... src/Utility/Ray/AABB.o"
+	@echo "... src/Utility/Ray/AABB.i"
+	@echo "... src/Utility/Ray/AABB.s"
+	@echo "... src/Utility/Ray/Ray.o"
+	@echo "... src/Utility/Ray/Ray.i"
+	@echo "... src/Utility/Ray/Ray.s"
 .PHONY : help
 
 

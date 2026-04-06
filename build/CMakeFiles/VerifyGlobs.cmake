@@ -25,8 +25,12 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/*.cpp")
 set(OLD_GLOB
   "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Camera/Camera.cpp"
+  "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Location/Location.cpp"
   "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Mainloop/main.cpp"
   "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Map/Map.cpp"
+  "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/BVH tree/BVH tree.cpp"
+  "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/AABB.cpp"
+  "/home/harryh/RADAR-2026/RADAR-LOCATION-CAMERA/src/Utility/Ray/Ray.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
