@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Pick available formatter (prefer clang-format-22 if present)
+if command -v clang-format-22 >/dev/null 2>&1; then
+  CLANG_FORMAT=clang-format-22
+elif command -v clang-format >/dev/null 2>&1; then
+  CLANG_FORMAT=clang-format
+else
+  echo "[pre-commit] clang-format is not installed."
+  echo "[pre-commit] Install clang-format and retry commit."
+  exit 1
+fi
+
+# Only check staged C/C++ files that are added/copied/modified/renamed
+mapfile -t STAGED_FILES < <(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(c|cc|cpp|cxx|h|hh|hpp|hxx)$' || true)
+
+if [ ${#STAGED_FILES[@]} -eq 0 ]; then
+  exit 0
+fi
+
+NEEDS_RECOMMIT=0
+CHANGED_FILES=()
+
+for file in "${STAGED_FILES[@]}"; do
+  # Ignore deleted or missing files
+  [ -f "$file" ] || continue
+
+  tmp_file=$(mktemp)
+  "$CLANG_FORMAT" -style=file "$file" > "$tmp_file"
+
+  if ! cmp -s "$file" "$tmp_file"; then
+    cp "$tmp_file" "$file"
+    git add "$file"
+    CHANGED_FILES+=("$file")
+    NEEDS_RECOMMIT=1
+  fi
+
+  rm -f "$tmp_file"
+done
+
+if [ "$NEEDS_RECOMMIT" -eq 1 ]; then
+  echo "[pre-commit] clang-format fixed formatting in:"
+  for file in "${CHANGED_FILES[@]}"; do
+    echo "  - $file"
+  done
+  echo "[pre-commit] Please review changes and run git commit again."
+  exit 1
+fi
+
+exit 0
