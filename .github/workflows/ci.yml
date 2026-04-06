@@ -17,15 +17,29 @@ jobs:
       - name: Install linters
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends clang-format cppcheck
+          sudo apt-get install -y --no-install-recommends clang-format clang-format-14 cppcheck
 
       - name: Check formatting with clang-format
         run: |
+          if command -v clang-format-14 >/dev/null 2>&1; then
+            FORMATTER=clang-format-14
+          elif command -v clang-format >/dev/null 2>&1; then
+            FORMATTER=clang-format
+          else
+            echo "clang-format is not installed on runner"
+            exit 1
+          fi
+
+          if [ ! -f .clang-format ]; then
+            echo "Missing .clang-format at repository root"
+            exit 1
+          fi
+
           FILES=$(git ls-files '*.cpp' '*.c' '*.hpp' '*.h' '*.cc' '*.cxx' '*.hh' '*.hxx')
           if [ -n "$FILES" ]; then
             set -o pipefail
             for f in $FILES; do
-              clang-format -style=file "$f" | diff -u "$f" - || {
+              "$FORMATTER" -style=file "$f" | diff -u "$f" - || {
                 echo "Formatting issues detected in $f"; exit 1; }
             done
           else
@@ -34,7 +48,7 @@ jobs:
 
       - name: Run cppcheck
         run: |
-          cppcheck --enable=warning,performance,portability,style --inconclusive --force --error-exitcode=1 src || true
+          cppcheck --enable=warning,performance,portability,style --inconclusive --force --error-exitcode=1 src
 
   build:
     name: Build
