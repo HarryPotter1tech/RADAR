@@ -67,6 +67,7 @@ jobs:
         run: |
           cppcheck -j "$(nproc)" --quiet \
             --enable=warning,performance,portability \
+            --suppress=uninitMemberVar:include/tiny_obj_loader.h \
             --error-exitcode=1 src data config
 
       - name: Configure (CMake)
