@@ -42,7 +42,9 @@ jobs:
           FAILED=0
           while IFS= read -r -d '' f; do
             case "$f" in
-              build/*|thirty-party-lib/*|model/*|.github/*|,github/*|include/tiny_obj_loader.h)
+              src/*|data/*|config/*)
+                ;;
+              *)
                 continue
                 ;;
             esac
@@ -65,7 +67,7 @@ jobs:
         run: |
           cppcheck -j "$(nproc)" --quiet \
             --enable=warning,performance,portability \
-            --error-exitcode=1 src
+            --error-exitcode=1 src data config
 
       - name: Configure (CMake)
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON

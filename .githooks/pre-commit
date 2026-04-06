@@ -20,7 +20,9 @@ CHANGED_FILES=()
 
 for file in "${STAGED_FILES[@]}"; do
   case "$file" in
-    build/*|thirty-party-lib/*|model/*|.github/*|,github/*|include/tiny_obj_loader.h)
+    src/*|data/*|config/*)
+      ;;
+    *)
       continue
       ;;
   esac
