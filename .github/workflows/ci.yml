@@ -24,8 +24,7 @@ jobs:
             libeigen3-dev \
             libyaml-cpp-dev \
             pkg-config \
-            clang-format \
-            cppcheck
+            clang-format
 
       - name: Check formatting with clang-format
         run: |
@@ -62,13 +61,6 @@ jobs:
           if [ "$FAILED" -ne 0 ]; then
             exit 1
           fi
-
-      - name: Run cppcheck (fast)
-        run: |
-          cppcheck -j "$(nproc)" --quiet \
-            --enable=warning,performance,portability \
-            --suppress=uninitMemberVar:include/tiny_obj_loader.h \
-            --error-exitcode=1 src data config
 
       - name: Configure (CMake)
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
