@@ -1,15 +1,11 @@
-#pragma once 
-#include <vector>
-#include <string>
-#include <Eigen/Dense>
+#pragma once
 #include "../../data/CameraData/CameraData.hpp"
-#include "../../data/MapData/MapData.hpp"
 #include "../../data/GameData/GameData.hpp"
-namespace Utility.BVHTree
-{
-    class BVHTree
-    {
-        
-    }
+#include "../../data/MapData/MapData.hpp"
+#include <Eigen/Dense>
+#include <string>
+#include <vector>
+namespace Utility.BVHTree {
+class BVHTree {}
 
-}
+} // namespace Utility. BVHTree

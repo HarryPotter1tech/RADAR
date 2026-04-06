@@ -1,5 +1,2 @@
 #include "Ray.hpp"
-namespace Utility::Ray
-{
-    
-}
+namespace Utility::Ray {}

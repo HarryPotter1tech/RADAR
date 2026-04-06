@@ -8,7 +8,7 @@ struct AABB {
     Eigen::Vector3d minPoint;
     Eigen::Vector3d maxPoint;
 };
-}
+} // namespace Data::UtilityData::AABB
 namespace Data::UtilityData::BVHNode {
 struct BVHNode {
     Data::UtilityData::AABB::AABB aabb;
@@ -16,7 +16,7 @@ struct BVHNode {
     int rightChild;
     int objectIndex;
 };
-} 
+} // namespace Data::UtilityData::BVHNode
 namespace Data::UtilityData::RayData {
 struct Ray {
     Eigen::Vector3d origin;
@@ -24,4 +24,4 @@ struct Ray {
     double tMin;
     double tMax;
 };
-} 
+} // namespace Data::UtilityData::RayData

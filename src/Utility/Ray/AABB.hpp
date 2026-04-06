@@ -19,4 +19,4 @@ public:
     bool RAY_AABB_intersect();
     Eigen::Vector2d RAY_MASH_intersect();
 };
-} 
+} // namespace Utility::AABB
