@@ -17,12 +17,12 @@ jobs:
       - name: Install linters
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends clang-format-22 cppcheck
+          sudo apt-get install -y --no-install-recommends clang-format cppcheck
 
       - name: Check formatting with clang-format
         run: |
-          if ! command -v clang-format-22 >/dev/null 2>&1; then
-            echo "clang-format-22 is not installed on runner"
+          if ! command -v clang-format >/dev/null 2>&1; then
+            echo "clang-format is not installed on runner"
             exit 1
           fi
 
@@ -31,15 +31,26 @@ jobs:
             exit 1
           fi
 
-          FILES=$(git ls-files | grep -E '\.(cpp|c|hpp|h|cc|cxx|hh|hxx)$' | grep -Ev '^(build/|thirty-party-lib/|model/|\.github/|,github/|include/tiny_obj_loader\.h$)')
-          if [ -n "$FILES" ]; then
-            set -o pipefail
-            for f in $FILES; do
-              clang-format-22 -style=file "$f" | diff -u "$f" - || {
-                echo "Formatting issues detected in $f"; exit 1; }
-            done
-          else
-            echo "No source files found for formatting check"
+          FAILED=0
+          while IFS= read -r -d '' f; do
+            case "$f" in
+              build/*|thirty-party-lib/*|model/*|.github/*|,github/*|include/tiny_obj_loader.h)
+                continue
+                ;;
+            esac
+
+            tmp_file=$(mktemp)
+            clang-format -style=file "$f" > "$tmp_file"
+            if ! cmp -s "$f" "$tmp_file"; then
+              echo "Formatting issues detected in $f"
+              diff -u "$f" "$tmp_file" || true
+              FAILED=1
+            fi
+            rm -f "$tmp_file"
+          done < <(git ls-files -z '*.cpp' '*.c' '*.hpp' '*.h' '*.cc' '*.cxx' '*.hh' '*.hxx')
+
+          if [ "$FAILED" -ne 0 ]; then
+            exit 1
           fi
 
       - name: Run cppcheck

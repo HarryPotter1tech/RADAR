@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Use one fixed formatter version to match CI exactly.
-if ! command -v clang-format-22 >/dev/null 2>&1; then
-  echo "[pre-commit] clang-format-22 is not installed."
-  echo "[pre-commit] Install clang-format-22 and retry commit."
+# Use clang-format available on the local machine.
+if ! command -v clang-format >/dev/null 2>&1; then
+  echo "[pre-commit] clang-format is not installed."
+  echo "[pre-commit] Install clang-format and retry commit."
   exit 1
 fi
 
@@ -19,11 +19,17 @@ NEEDS_RECOMMIT=0
 CHANGED_FILES=()
 
 for file in "${STAGED_FILES[@]}"; do
+  case "$file" in
+    build/*|thirty-party-lib/*|model/*|.github/*|,github/*|include/tiny_obj_loader.h)
+      continue
+      ;;
+  esac
+
   # Ignore deleted or missing files
   [ -f "$file" ] || continue
 
   tmp_file=$(mktemp)
-  clang-format-22 -style=file "$file" > "$tmp_file"
+  clang-format -style=file "$file" > "$tmp_file"
 
   if ! cmp -s "$file" "$tmp_file"; then
     cp "$tmp_file" "$file"
