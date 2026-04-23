@@ -1,3 +1,28 @@
+## RADAR Vision Location
+
+Repository:
+
+- https://github.com/HarryPotter1tech/alliance_radar_vision_location.git
+
+## Quick Start
+
+```bash
+git clone https://github.com/HarryPotter1tech/alliance_radar_vision_location.git
+cd alliance_radar_vision_location
+./init.sh
+cmake -S . -B build
+cmake --build build -j
+```
+
+## Daily Git Workflow
+
+```bash
+git pull --rebase
+git add .
+git commit -m "your message"
+git push
+```
+
 ## Git Pre-commit Hook (clang-format)
 
 Install once after cloning:
