@@ -10,3 +10,6 @@ Makefile
 compile_commands.json
 CTestTestfile.cmake
 
+# python venv & images
+camera_calibration/camera_cal
+camera_calibration/calibration_images
